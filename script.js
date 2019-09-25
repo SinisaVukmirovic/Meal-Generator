@@ -36,26 +36,33 @@ function displayMealData(meal) {
     }
 
     const incredientsList = `
-        <img src="${meal.strMealThumb}" alt="Meal Image">
-        
-        ${meal.strCategory
-            ? `<p><strong>Category:</strong> ${meal.strCategory}</p>`
-            : ''
-        }
-        
-        ${meal.strArea 
-            ? `<p><strong>Area:</strong> ${meal.strArea}</p>` 
-            : ''
-        }
-        
-        <h4>Ingredients:</h4>
+        <div class="pic-info">
+            <div class="img">
+                <img src="${meal.strMealThumb}" alt="Meal Image">
+            </div>
 
-        <ul>
-            ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
-        </ul>
+            <div class="info">
+                <h2>${meal.strMeal}</h2>
+            
+                ${meal.strCategory
+                    ? `<p><strong>Category:</strong> ${meal.strCategory}</p>`
+                    : ''
+                }
+                
+                ${meal.strArea 
+                    ? `<p><strong>Area:</strong> ${meal.strArea}</p>` 
+                    : ''
+                }
 
-        <h3>${meal.strMeal}</h3>
-        <p>${meal.strInstructions}</p>
+                <h4>Ingredients:</h4>
+
+                <ul>
+                    ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+        
+        <h5>${meal.strInstructions}</h5>
     `;
 
     mealElem.innerHTML = incredientsList;

@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+    color: #eee;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    background-color: greenyellow;
+    color: #222;
+}
+    header h1 {
+        margin: 0 1em;
+    }
+    header span {
+        font-size: 3rem;
+        color: green;
+    }
+        header span:first-child {transform: rotate(-30deg)}
+        header span:last-child {transform: rotate(30deg)}
+
+.container {
+    width: 70%;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .container > h4 {
+        text-align: center;
+    }
+    .container button {
+        margin: 1em;
+        padding: .5em 1em;
+        background-color: green;
+        color: greenyellow;
+        font-size: 1.25rem;
+        font-weight: bold;
+        outline: none;
+        border: 1px solid greenyellow;
+        cursor: pointer;
+    }
+
+.meal {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+}
+    .meal .pic-info {
+        display: flex;
+        margin-bottom: 2em;
+    }
+        .meal .img {
+            flex: 3;
+            margin-right: 2em;
+        }
+            .meal .img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        .meal .info {
+            flex: 2;
+        }
+            .info h2 {
+                padding: .5em 2em;
+                margin: 2em 0 1em -4em;
+                color: #333;
+                background-color: greenyellow;
+            }
+            .info p {
+                margin: .5em 0;
+            }
+            .info h4 {
+                margin: 1.5em 0 1em 0;
+            }
+            .info ul {
+                margin-left: 2em;
+                color: greenyellow;
+            }
+    
+    .meal h5 {
+        margin: 0 4em;
+        line-height: 1.75;
+    }
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    .container {
+        width: 90%;
+    }
+    .meal .pic-info {
+        flex-direction: column;
+    }
+        .meal .img {
+            margin: 0;
+        }
+        .meal .info {
+            margin: 0 2em;
+        }
+        .info h2 {
+            margin: -1.5em 2em 1em;
+            color: #333;
+            background-color: greenyellow;
+        }
+        .meal h5 {
+            margin: 1em 0;
+        }
+}
