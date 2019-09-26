@@ -48,7 +48,12 @@ header {
         outline: none;
         border: 1px solid greenyellow;
         cursor: pointer;
+        transition: all 250ms;
     }
+        .container button:hover {
+            filter: brightness(110%);
+            box-shadow: 0 0 10px lime;
+        }
 
 .meal {
     display: flex;
